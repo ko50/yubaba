@@ -26,11 +26,11 @@ class _MyYubabaState extends State<MyYubaba> {
   Widget _yourName() {
     name = _nameController.text;
     final int newNameIndex = Random().nextInt(name.length);
-    newName = name.substring(newNameIndex);
+    newName = name.substring(newNameIndex, newNameIndex + 1);
 
     return Text(
-      'フン。$nameというのかい。\n贅沢な名だねぇ。\n\n'
-      '今からお前の名前は$newNameだ。\nいいかい、$newNameだよ。'
+      'フン。$nameというのかい。贅沢な名だねぇ。\n\n'
+      '今からお前の名前は$newNameだ。いいかい、$newNameだよ。\n'
       '分かったら返事をするんだ、$newName!!',
       style: TextStyle(fontSize: 20),
     );
@@ -39,7 +39,10 @@ class _MyYubabaState extends State<MyYubaba> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('湯婆婆')),
+      appBar: AppBar(
+        title: Text('湯婆婆'),
+        backgroundColor: Colors.blueGrey,
+      ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
         child: Column(
