@@ -11,7 +11,7 @@ class _IntegratedYubabaState extends State<IntegratedYubaba> {
   final TextEditingController _nameController = TextEditingController();
 
   bool _predged = false;
-  String name = '', newName = '';
+  String name, newName;
 
   void _stealName() {
     name = _nameController.text;

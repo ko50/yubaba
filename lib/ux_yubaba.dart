@@ -12,7 +12,7 @@ class _UxYubabaState extends State<UxYubaba> {
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
 
   bool _predged = false;
-  String name = '', newName = '';
+  String name, newName;
 
   Widget _pledgeForm() => Flexible(
         child: Container(

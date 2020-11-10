@@ -11,7 +11,7 @@ class _MyYubabaState extends State<MyYubaba> {
   final TextEditingController _nameController = TextEditingController();
 
   bool _predged = false;
-  String name = '', newName = '';
+  String name, newName;
 
   Widget _pledgeForm() => TextField(
         controller: _nameController,
