@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yubaba/view/omae.dart';
 
 class Pledge extends StatelessWidget {
   final TextEditingController _nameController = TextEditingController();
@@ -8,8 +9,11 @@ class Pledge extends StatelessWidget {
         decoration: InputDecoration(hintText: '千尋'),
       );
 
-  Widget _confirmButton() => MaterialButton(
-        onPressed: () {},
+  Widget _confirmButton(BuildContext context) => MaterialButton(
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => Omae(_nameController.text)),
+        ),
         child: Text('誓約'),
       );
 
@@ -25,7 +29,7 @@ class Pledge extends StatelessWidget {
             style: TextStyle(fontSize: 35),
           ),
           _pledge(),
-          _confirmButton(),
+          _confirmButton(context),
         ],
       ),
     );

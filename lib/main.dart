@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       title: '湯婆婆',
       theme: ThemeData(
         primarySwatch: Colors.amber,
+        fontFamily: '',
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Pledge(),
