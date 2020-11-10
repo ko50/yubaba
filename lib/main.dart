@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:yubaba/view/pledge.dart';
+import 'package:yubaba/my_yubaba.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,11 +10,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: '湯婆婆',
       theme: ThemeData(
-        primarySwatch: Colors.amber,
-        fontFamily: '',
+        primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Pledge(),
+      home: MyYubaba(),
     );
   }
 }
